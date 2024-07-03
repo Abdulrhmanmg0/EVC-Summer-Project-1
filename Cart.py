@@ -1,6 +1,6 @@
 class Cart:
     def __init__(self):
-        self.items = {}
+        self.items = {}   # {"item obj 1": 1, "item obj 2:" 4}
         self.num_of_items = 0
         self.total_price = 0.0
 
@@ -19,16 +19,16 @@ class Cart:
         self.num_of_items += quantity
         self.total_price += item.price * quantity
 
-    def remove_item(self, item_name, quantity=1):
-        if item_name in self.items:
-            if self.items[item_name] > quantity:
-                self.items[item_name]] -= quantity
+    def remove_item(self, item, quantity=1):
+        if item.name in self.items:
+            if self.items[item.name] > quantity:
+                self.items[item.name] -= quantity
                 self.num_of_items -= quantity
-                self.total_price -= self.items[item_name]['item'].price * quantity
-            elif self.items[item_name] == quantity:
+                self.total_price -= item.price * quantity
+            elif self.items[item.name] == quantity:
                 self.num_of_items -= quantity
-                self.total_price -= self.items[item_name]['item'].price * quantity
-                del self.items[item_name]
+                self.total_price -= item.price * quantity
+                del self.items[item.name]
 
     def display_cart(self):
         total = 0
