@@ -21,11 +21,11 @@ class Cart:
 
     def remove_item(self, item_name, quantity=1):
         if item_name in self.items:
-            if self.items[item_name]['quantity'] > quantity:
-                self.items[item_name]['quantity'] -= quantity
+            if self.items[item_name] > quantity:
+                self.items[item_name]] -= quantity
                 self.num_of_items -= quantity
                 self.total_price -= self.items[item_name]['item'].price * quantity
-            elif self.items[item_name]['quantity'] == quantity:
+            elif self.items[item_name] == quantity:
                 self.num_of_items -= quantity
                 self.total_price -= self.items[item_name]['item'].price * quantity
                 del self.items[item_name]
