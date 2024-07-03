@@ -12,9 +12,9 @@ class Cart:
 
     def add_item(self, item, quantity=1):
         if item.name in self.items:
-            self.items[item.name]['quantity'] += quantity
+            self.items[item.name] += quantity
         else:
-            self.items[item.name] = {'item': item, 'quantity': quantity}
+            self.items[item.name] = quantity
         
         self.num_of_items += quantity
         self.total_price += item.price * quantity
@@ -41,15 +41,3 @@ class Cart:
                 quantity = details['quantity']
                 print(f"Item: {item.name}, Quantity: {quantity}, Total Price: ${item.price * quantity:.2f}, Calorie: {item.calorie}")
             
-
-
-# if __name__ == "__main__":
-#     cart = Cart()
-#     item1 = Item("Pizza", 10.00, 1000)
-#     item2 = Item("Burger", 5.00, 2000)
-    
-#     cart.add_item(item1, 2)
-#     cart.add_item(item2, 1)
-#     cart.display_cart()
-#     print(f"Number of items: {cart.number_of_items()}")
-#     print(f"Total price: ${cart.get_total_price():.2f}")

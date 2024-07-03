@@ -1,3 +1,6 @@
+from Cart import Cart
+
+
 class User:
     """ 
     A class to represent a User.
