@@ -1,3 +1,7 @@
 # EVC-Summer-Project-1
 # Python Streamlit 
-![alt text](/Userimg.png)
+![USER PAGE](/Userimg.png)
+![USER PAGE](/Restimg.png)
+![USER PAGE](/Menuimg.png)
+![USER PAGE](/Cart.png)
+![USER PAGE](/Track.png)
